@@ -1,0 +1,70 @@
+body {
+    font-family: Roboto, Helvetica, sans-serif;
+    background-color: #EFEFEF;
+}
+
+.rdbc .header-text {
+    font-size: 86px;
+    font-weight: 100;
+}
+
+.rdbc .mdl-card {
+    width: auto;
+}
+
+.rdbc .mdl-card__title {
+    height: 176px;
+}
+
+.rdbc .mdl-card__title {
+    color: #fff;
+}
+
+.rdbc .mdl-grid {
+    margin: auto;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.rdbc .rdbc-header .mdl-grid {
+    text-align: center
+}
+
+.rdbc .rdbc-header {
+    background-color: #455a64;
+    color: #EFEFEF;
+
+}
+
+.rdbc .rdbc-subheader {
+    line-height: 2em;
+    font-size: 15pt;
+    font-weight: 400;
+}
+
+.rdbc .mdl-card {
+    margin: 0 auto;
+}
+
+.rdbc .mdl-card__menu {
+    color: white;
+}
+
+.rdbc .mdl-mini-footer__right-section {
+    color: white;
+    font-size: 200%;
+}
+
+.rdbc .mdl-card.big .mdl-card__title {
+    height: 210px;
+}
+
+.rdbc .mdl-card.big .mdl-card__title-text {
+    font-size: 2.5em;
+}
+/*
+.rdbc .mdl-mini-footer {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+*/
