@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>rdbc database connectivity API</title>
+    <title>rdbc - asynchronous database access API for Scala and Java</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description"
-          content="rdbc - Asynchronous and reactive database connectivity API for Scala and Java">
+          content="rdbc - Asynchronous and reactive database access API for Scala and Java">
 
     <link rel="stylesheet"
           href="https://code.getmdl.io/1.3.0/material.light_green-pink.min.css">
@@ -17,6 +17,25 @@
 
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      var gaID = 'UA-103140141-1';
+
+      ga('create', gaID, 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+
+      function gaOptout() {
+          var disableStr = 'ga-disable-' + gaID;
+          document.cookie = disableStr + '=true; domain=' + window.location.hostname + '; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+          window[disableStr] = true;
+      }
+    </script>
 
 </head>
 <body>
@@ -31,7 +50,7 @@
 
                     <span class="md-body rdbc-subheader">
                             rdbc is a SQL-level relational
-                            database connectivity API targeting Scala and Java
+                            database access API targeting Scala and Java
                             programming languages. The API is fully asynchronous
                             and provides a possibility to leverage Reactive
                             Streams' stream processing capabilities.
@@ -137,8 +156,60 @@
                 </div>
             </div>
         </div>
+
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+            </div>
+            <div class="mdl-mini-footer__middle-section">
+                <ul class="mdl-mini-footer__link-list">
+                    <li><a id="privacy_policy_link" href="#">Privacy policy</a></li>
+                </ul>
+            </div>
+        </footer>
     </main>
+
 </div>
+
+<dialog id="privacy_policy_dialog" class="mdl-dialog">
+    <h3 class="mdl-dialog__title">Privacy policy</h3>
+    <div class="mdl-dialog__content">
+        <h3>Data collection</h3>
+
+        This site uses Google Analytics to collect information. No personally identifiable
+        information is collected. This site uses Google Analytics IP address anonymization feature.
+
+        <h3>Data processing</h3>
+
+        The site owner uses the collected data to understand how many people visit
+        the site pages and where they came from.
+
+        <h3>Opt-out from tracking</h3>
+
+        Click <a onclick="gaOptout(); alert('Opted out')">here</a> to opt-out of the
+        tracking. This will create a cookie to remember the opt-out for your browser.
+    </div>
+    <div class="mdl-dialog__actions">
+        <button type="button" class="mdl-button">Close</button>
+    </div>
+</dialog>
+
+<script>
+       (function() {
+        'use strict';
+        var dialogButton = document.querySelector('#privacy_policy_link');
+        var dialog = document.querySelector('#privacy_policy_dialog');
+        if (!dialog.showModal) {
+          dialogPolyfill.registerDialog(dialog);
+        }
+        dialogButton.addEventListener('click', function() {
+           dialog.showModal();
+        });
+        dialog.querySelector('button:not([disabled])')
+        .addEventListener('click', function() {
+          dialog.close();
+        });
+      }());
+</script>
 
 </body>
 </html>

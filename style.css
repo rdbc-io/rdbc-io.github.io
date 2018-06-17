@@ -1,6 +1,7 @@
 body {
     font-family: Roboto, Helvetica, sans-serif;
     background-color: #EFEFEF;
+    min-height: 100vh;
 }
 
 .rdbc .header-text {
@@ -59,11 +60,6 @@ body {
     color: white;
 }
 
-.rdbc .mdl-mini-footer__right-section {
-    color: white;
-    font-size: 200%;
-}
-
 .rdbc .mdl-card.big .mdl-card__title {
     height: 210px;
 }
@@ -71,9 +67,13 @@ body {
 .rdbc .mdl-card.big .mdl-card__title-text {
     font-size: 2.5em;
 }
-/*
+
 .rdbc .mdl-mini-footer {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    background-color: #EFEFEF;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-*/
+
+.rdbc .mdl-mini-footer__link-list {
+    color: #689f38;
+}
